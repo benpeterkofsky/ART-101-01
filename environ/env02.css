@@ -4,14 +4,30 @@ body{ background-image: url("https://comicbook.com/wp-content/uploads/sites/4/20
 }
 .container {
   display: flex;
-  height: 100vh; /* Full viewport height */
+  height: 20vh;
+  border: 5px solid blue;
+  padding: 30px;
 }
-.left-zone, .right-zone {
-  flex: 1; /* Both divs share space equally */
-  height: 100%;
-}
+
 img src="https://cdn.britannica.com/08/96908-050-F3EF1980/project-Prince-William-Sound-Natural-Geography-in.jpg"
  {
   width: 200px;
   height: auto; /* Maintains aspect ratio */
+}
+
+#left-zone {
+  background-color: white
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+#header {
+  background: teal;
+  border: 5px solid green;
+  text-align:center;
+}
+#full-page {
+  border: 5px solid blue;
+  padding: 30px;
 }
