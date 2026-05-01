@@ -5,7 +5,7 @@ body{ background-image: url("https://comicbook.com/wp-content/uploads/sites/4/20
 .container {
   display: flex;
   height: 20vh;
-  border: 5px solid blue;
+  border: 5px solid rgb(25, 29, 27);
   padding: 30px;
 }
 
@@ -24,10 +24,14 @@ img src="https://cdn.britannica.com/08/96908-050-F3EF1980/project-Prince-William
 
 #header {
   background: teal;
-  border: 5px solid green;
+  border: 5px solid rgb(29, 115, 29);
   text-align:center;
 }
 #full-page {
   border: 5px solid blue;
   padding: 30px;
 }
+#main div {
+  flex: 1;
+}
+
