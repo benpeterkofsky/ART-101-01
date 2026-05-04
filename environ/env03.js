@@ -1,3 +1,16 @@
+let environmentTitle = "Benji's Snake Aquarium";
+let environmentElements = ["snake", "fish", "a rock"];   
+
+let mainEntity = {
+    name: "snake"
+    type: "soft border",
+    mood: "nervous",
+    isMoving: false,
+      favoriteElement: environmentElements[1]
+};
+
+let elem = document.querySelector (."fish");"
+elem.style.border = "5px solid rgb(32, 38, 35)";
 let count = 0;
 let buttonCreature = {
     name: "needy-button",

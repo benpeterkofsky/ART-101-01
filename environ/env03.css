@@ -1,0 +1,35 @@
+body{ background-image: url("https://comicbook.com/wp-content/uploads/sites/4/2025/02/Pokemon-Legends-Z-A-River.jpg?w=1024");
+   background-size: cover;
+   background-attachment: fixed;
+}
+.container {
+  display: flex;
+  height: 100vh;
+  border: 5px solid rgb(32, 38, 35);
+  padding: 30px;
+}
+
+img src="https://cdn.britannica.com/08/96908-050-F3EF1980/project-Prince-William-Sound-Natural-Geography-in.jpg"
+ {
+  width: 200px;
+  height: auto; /* Maintains aspect ratio */
+}
+
+#left-zone {
+  background-color: white
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+#header {
+  background: teal;
+  border: 5px solid rgb(29, 115, 29);
+  text-align:center;
+}
+
+}
+#main div {
+  flex: 1;
+}
+
