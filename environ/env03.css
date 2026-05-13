@@ -1,22 +1,23 @@
-body{ background-image: url("https://comicbook.com/wp-content/uploads/sites/4/2025/02/Pokemon-Legends-Z-A-River.jpg?w=1024");
-   background-size: cover;
-   background-attachment: fixed;
+body {
+  background-image: url("https://comicbook.com/wp-content/uploads/sites/4/2025/02/Pokemon-Legends-Z-A-River.jpg?w=1024");
+  background-size: cover;
+  background-attachment: fixed;
 }
+
 .container {
   display: flex;
-  height: 100vh;
+  height: 320px;
   border: 5px solid rgb(32, 38, 35);
   padding: 30px;
 }
 
-img src="https://cdn.britannica.com/08/96908-050-F3EF1980/project-Prince-William-Sound-Natural-Geography-in.jpg"
- {
+img {
   width: 200px;
   height: auto; /* Maintains aspect ratio */
 }
 
 #left-zone {
-  background-color: white
+  background-color: white;
   display: flex;
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
@@ -25,11 +26,66 @@ img src="https://cdn.britannica.com/08/96908-050-F3EF1980/project-Prince-William
 #header {
   background: teal;
   border: 5px solid rgb(29, 115, 29);
-  text-align:center;
+  text-align: center;
 }
 
-}
 #main div {
   flex: 1;
 }
 
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #f0f0f0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.theme-switcher-wrapper {
+  align-items: center;
+  margin-top: 20px;
+}
+
+.theme-switch input{
+  display: none;
+}
+
+.slider
+background-color: #ccc;
+  border-radius: 34px;
+  cursor: pointer;
+  height: 20px;
+  position: relative;
+  width: 40px;
+
+.slider:before {
+  background-color: white;
+  border-radius: 50%;
+  content: "";
+  height: 16px;
+  left: 2px;
+  position: absolute;
+  top: 2px;
+  transition: transform 0.3s ease; /* Smooth transition */
+  width: 16px;
+}
+input:checked + .slider:before {
+  background-color: aquamarine;
+}
+input:checked + .slider {
+ transform: translateX(148px);
+}
+slider.round
+  border-radius: 80px;
+
+.slider.round:before {
+  border-radius: 50%;
+}

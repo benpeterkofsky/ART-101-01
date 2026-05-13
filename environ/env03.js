@@ -9,31 +9,44 @@ let mainEntity = {
       favoriteElement: environmentElements[1]
 };
 
-let elem = document.querySelector (."fish");"
-elem.style.border = "5px solid rgb(32, 38, 35)";
-let count = 0;
-let buttonCreature = {
-    name: "needy-button",
-    species: "interface creature",
-    favoriteFood: "clicks",
-    moods: ["sleepy", "nervous", "glowing", "dramatic", "hopeful", "confused"]
-};
-    
-$("#needy-button").click(function () {
+let elem = document.querySelector (."snake");"
+elem.addEventListener("click", function() {
+    mainEntity.isMoving = !mainEntity.isMoving;
+    if (mainEntity.isMoving) {
+        elem.style.transform = "translateX(100px)";
+    } else {
+        elem.style.transform = "translateX(0)";
 
-    count = count + 1;
+const btn = document.getElementById("theme-toggle");
 
-    let arrayPosition = count - 1;
-    let currentMood = buttonCreature.moods[arrayPosition];
-    let message = "<p>You clicked me" + count +"times.</p>";
-
-    message = message +"<p> My current mood is " + currentMood +
-        "I am a" +" " +  buttonCreature.name +".</p>";
-    
-
-    $("#output").html(message);
-
-    console.log(count);
-    console.log(arrayPosition);
-    console.log(currentMood);
+btn.addEventListener("click", () => {
+  // Check current theme
+  const currentTheme = document.documentElement.getAttribute("data-theme");
+  
+  if (currentTheme === "dark") {
+    document.documentElement.setAttribute("data-theme", "light");
+    btn.textContent = "Switch to Night Mode";
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    btn.textContent = "Switch to Day Mode";
+  }
 });
+const toggleswitch = document.querySelector(".toggle-switch input[type='checkbox']");
+const currenttheme = localStorage.getItem("theme") ? localStorage.getItem("theme") : null;
+
+if (currenttheme) {
+    document.documentElement.setAttribute("data-theme", currenttheme);
+
+    if (currenttheme === "dark") {
+        toggleswitch.checked = true;
+
+        function switchtheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute("data-theme", "dark");
+                localStorage.setItem("theme", "dark");
+            } else {
+                document.documentElement.setAttribute("data-theme", "light");
+                localStorage.setItem("theme", "light");
+            }
+toggleswitch.addEventListener("change", switchtheme, false);
+    }
